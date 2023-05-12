@@ -22,7 +22,7 @@ Use below to generate AccessToken.
  
  ## Integration testing
  
-Please use postman collection attached inside Integration Testing folder 
+Please use [Postman Collection](https://github.com/rajeevpoulose/SettlementService/blob/master/SettlementService/Integration%20Testing/SettlementService.postman_collection.json) to test APIs 
  1. Use Token Request to generate Access token.
  2. Use Bearer Token Authentication to run Post API
 
