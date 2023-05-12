@@ -1,0 +1,110 @@
+{
+	"info": {
+		"_postman_id": "f65f5487-79d1-4590-8a56-b0b6422a7824",
+		"name": "SettlementService",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Post Booking",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkM3dDVqZlpPOEtnSUhLSmtpSzdSdyJ9.eyJpc3MiOiJodHRwczovL2Rldi1xc3U2bGJwM2wzaTF6MWh2LmF1LmF1dGgwLmNvbS8iLCJzdWIiOiJTenhzUmNFME4wSksxU1pWVDRlQzVKSjFGUEtHYWNMcUBjbGllbnRzIiwiYXVkIjoiaHR0cHM6Ly9zZXR0bGVtZW50c2VydmljZS5jb20vIiwiaWF0IjoxNjgzODA4NTUxLCJleHAiOjE2ODM4OTQ5NTEsImF6cCI6IlN6eHNSY0UwTjBKSzFTWlZUNGVDNUpKMUZQS0dhY0xxIiwic2NvcGUiOiJ3cml0ZS5ib29raW5ncyIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.bA9EEkzXKevofM5IuZXc39K_XXX6PnyoT9W_1J7_oPWUok6R1Y4J-vQ3m9-9yywRInXfBW-vvaBCwEASk2OseKysTExzVA9pKFjlwM315OLooRZPg2O6YLbpJFoen1VBHMTktPtnWIKqRlnqc5GBA3l3Z2k0ZR0jD272fFtHolnnBTeVfXQVHEkI5ESXgc1_Zn98oijutpvsnoTE9HKXYORqavbAU58djSlUfTzPaxuZsr6vdUNc2QOsZdT_EVG1huAdO1uDSriPqytUmodUODNwG43njo1VSStM-ETyjl9mEjmqaB_sFl_hn2oGoiqffOFnktP5XmbicQpNFHpT0w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"bookingTime\": \"13:12\",\r\n  \"name\": \"jo\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5095/api/v1/Booking",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5095",
+					"path": [
+						"api",
+						"v1",
+						"Booking"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Token Request",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "content-type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"client_id\":\"SzxsRcE0N0JK1SZVT4eC5JJ1FPKGacLq\",\"client_secret\":\"4zLYkoRPSgUR6lPTue4cuVzxl44O-vvjFFynl5BuzqPV63EIJv3Q9lq119tEDphP\",\"audience\":\"https://settlementservice.com/\",\"grant_type\":\"client_credentials\"}"
+				},
+				"url": {
+					"raw": "https://dev-qsu6lbp3l3i1z1hv.au.auth0.com/oauth/token",
+					"protocol": "https",
+					"host": [
+						"dev-qsu6lbp3l3i1z1hv",
+						"au",
+						"auth0",
+						"com"
+					],
+					"path": [
+						"oauth",
+						"token"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": [
+			{
+				"key": "addTokenTo",
+				"value": "header",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
